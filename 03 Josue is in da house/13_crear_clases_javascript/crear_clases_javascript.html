@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.info("start");
+
+		function vehicle() {
+			this.color = 'red';
+			this.type = 'car';
+			this.doors = 4;
+
+			this.changeColor = function(newcolor){
+				this.color = newcolor;
+			}
+
+			this.changeDoors = function(doors){
+				this.doors = doors;
+			}
+		}
+
+		var bocho = new vehicle();
+			bocho.changeColor('blue');
+			bocho.changeDoors(2);
+			console.log("BOCHO", bocho);
+
+		var sentra = new vehicle();
+			sentra.changeDoors(5);
+			console.log('SENTRA', sentra);
+
+	</script>
+</body>
+</html>

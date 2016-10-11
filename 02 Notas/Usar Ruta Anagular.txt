@@ -1,0 +1,6 @@
+#Usar Rutas de Anagular (26/04/16)
+- https://batch9negrafront.slack.com/archives/general/p1461725059000010
+- Hacer dos rutas diferntes con sus componentes.
+
+# (27/04/16)
+- Learn Angular w.Bootstrap https://www.codeschool.com/learn-angular-js-with-bootstrap

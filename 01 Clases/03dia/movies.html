@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movies"><!-- nombre del alchivo ng-app = 'movies' -->
+	<head>
+		<meta charset="utf-8">
+		<title>Día 03 - Ejemplo 01 | Fetch atributos de json utlizando directivas.</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src="myApp.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container" ng-controller="movieController as movie">
+			<div class="row">
+				<div class="card-panel teal lighten-2">
+					<h4>Filter by:</h4>
+					<input type="text" placeholder="Name" ng-model="search.title">
+					<input type="text" placeholder="Episode" ng-model="search.episode_id">
+
+					<h4>Extract Release Date: {{search.release_date}}</h4>
+					<form action="#">
+						<p class="range-field">
+							<input type="range" id="test5" min="1960" max="2016" ng-model="search.release_date" />
+						</p>
+					</form></br>
+
+					<div class="card-action">
+						<p>
+							<input type="checkbox" id="test7" ng-model="movie.useFilterForm"/>
+							<label for="test7">Use Filter by Form</label>
+						</p>
+					</div>
+				</div>
+
+				<h4>Result:</h4>
+				<div class="card col s4" ng-repeat="m in movie.collection | filter : (movie.useFilterForm || '') && search | orderBy: 'episode_id'">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" style="height:400px" ng-src="{{m.img}}">
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4">{{m.title}}<i class="material-icons right">more_vert</i></span>
+						<p><a ng-href="{{m.url}}">Link for more information...</a></p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">{{m.name}} Episode {{m.episode_id}} - {{m.title}}
+							<i class="material-icons right">close</i>
+						</span>
+						<p>
+							<b>Opening:</b> {{m.opening_crawl}}<br>
+						</p>
+						<p>
+							<b>Release Date:</b> {{m.release_date}}<br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- MATERIALIZE -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	</body>
+</html>

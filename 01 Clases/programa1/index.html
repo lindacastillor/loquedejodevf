@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="myApp.js"></script>
+  </head>
+	<body ng-controller="myController as first">
+		<!-- python -m SimpleHTTPServer  -->
+		{{first.name}}
+		<p>{{first.number}} + 1 = {{first.number+1}}</p>
+		<p>{{first.number}} + 1 = {{first.number/2}}</p>
+
+		<p ng-repeat=""></p>
+		<button ng-click="first.clickeame()">Click Aquí</button>
+		{{first.age}}
+
+		<p ng-repeater="person in first.people">{{person.name}}</p>
+
+		<input type="text" ng-model="search.name">
+			<table style="border:1px solid gray;">
+				<tr ng-repeat="person in first.people | filter:search">
+					<td>{{person.name}}</td>
+					<td>{{person.age}}</td>
+					<td>{{person.place}}</td>
+					<td><button ng-click="first.addage(person)">Add age</button></td>
+				</tr>
+			</table>
+	</body>
+</html>

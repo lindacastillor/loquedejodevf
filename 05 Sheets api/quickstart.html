@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en" ng-app="googleSheet">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div  ng-app="chartApp" ng-controller="chartController">
+		<fusioncharts
+			width="100%"
+			height="400"
+			type="doughnut3d"
+			datasource="{{sheetDataSource}}">
+		</fusioncharts>
+	</div> -->
+
+	<!-- LIBRERÍAS
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular.min.js'></script>
+	<script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+	<script src='app/app.js'></script>  -->
+	<!-- <script src='/location/of/angular-fusioncharts.min.js'></script> -->
+	<!-- Read more at http://tutorials.pluralsight.com/front-end-javascript/using-a-spreadsheet-to-power-charts-in-angularjs-apps#75dQOAHWFlfVR1DK.99 -->
+<!-- </body>
+</html> -->
+
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+	<meta charset="utf-8" />
+	<title>AngularJS Plunker</title>
+	<script>document.write('<base href="' + document.location + '" />');</script>
+</head>
+
+<body ng-controller="SuperCtrl">
+	hola
+	<ul>
+		<li ng-repeat="entry in parsedEntries">
+			<span style="color:red;">json: </span>{{ entry | json}} <br />
+			<span style="color:red;">Nombre: </span>{{ entry['name'] }} <br />
+			<span style="color:red;">Apellido: </span>{{ entry['category'] }} <br />
+			<span style="color:red;">Color: </span>{{ entry['description'] }} <br />
+			<span style="color:red;">Sexo: </span>{{ entry['sexo'] }} <br />
+			<!-- <span style="color:red;">URL: </span>{{ entry['url'] }} <br /> -->
+			<!-- <span style="color:red;">?: </span>{{ entry['yo'] }} <br /> -->
+		</br></li>
+	</ul>
+
+	<!-- LIBRARIES -->
+	<script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.14/angular.js" data-semver="1.3.14"></script>
+	<script src="app/app.js"></script>
+</body>
+</html>

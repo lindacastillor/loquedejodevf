@@ -1,0 +1,14 @@
+star-wars-character {
+	display: inline-block;
+	width: 200px;
+	border: solid 1px #666;
+	padding: 20px;
+	margin: 20px;
+	vertical-align: top;}
+
+.blue {
+	color: blue;}
+.red {
+	color: red;}
+.orange {
+	color: orange;}
